@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mansopresk21.mansoshopping.MainActivity">
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shop"
+        android:background="#ffffff"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shop"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_close"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/welcome_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Mansoshopping !"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#fff"/>
+    <TextView
+        android:id="@+id/fashion_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text="Be in sync with latest in fashion."
+        android:layout_below="@+id/welcome_label"
+        android:textColor="#fff"/>
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/fashion_label">
+         <Button
+            android:id="@+id/fb_btn"
+            android:layout_width="160dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="FACEBOOK"
+            android:textColor="@color/colortext"
+            android:drawableLeft="@drawable/facebook"/>
+        <Button
+            android:id="@+id/google_btn"
+            android:layout_width="150dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/search"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="Google"
+            android:textColor="@color/colortext"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/btnlayout"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or login via  e mail"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colortext"/>
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+
+            android:background="@android:color/darker_gray"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp">
+        <EditText
+            android:id="@+id/emailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Id"
+            android:backgroundTint="@color/colortext"
+            android:textColorHint="@color/colortext"/>
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:backgroundTint="@color/colortext"
+            android:textColorHint="@color/colortext"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:layout_marginLeft="200dp"
+            android:textColor="@color/colortext"/>
+        <Button
+            android:id="@+id/signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sign in"
+            android:textColor="#000"
+            android:background="@drawable/button"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/details"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dont't have an account?"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colortext"/>
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colortext"
+            android:text="sign up"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

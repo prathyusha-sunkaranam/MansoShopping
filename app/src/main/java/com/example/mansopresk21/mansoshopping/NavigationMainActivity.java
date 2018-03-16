@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mansopresk21.mansoshopping.ExpandListView.ExplistMainActivity;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class NavigationMainActivity extends AppCompatActivity
@@ -115,6 +117,9 @@ public class NavigationMainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.women_label) {
+
+            Intent ing = new Intent(NavigationMainActivity.this, ExplistMainActivity.class);
+            startActivity(ing);
             // Handle the camera action
         } else if (id == R.id.men_label) {
 

@@ -45,6 +45,9 @@
             <item
                 android:id="@+id/rate_label"
                 android:title="Rate App" />
+            <item
+                android:id="@+id/logout_label"
+                android:title="LogOut" />
         </menu>
     </item>
 

@@ -20,7 +20,9 @@
         android:layout_width="50dp"
         android:layout_height="30dp"
         android:src="@drawable/ic_close"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colortext"
+        android:onClick="close"/>
 
 
     <TextView
@@ -31,7 +33,7 @@
         android:textStyle="italic"
         android:textSize="20sp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:textColor="#fff"/>
     <TextView
         android:id="@+id/fashion_label"
@@ -123,6 +125,7 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:hint="Password"
             android:backgroundTint="@color/colortext"
             android:textColorHint="@color/colortext"/>
@@ -131,6 +134,7 @@
             android:layout_height="wrap_content"
             android:text="Forgot password?"
             android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/colortext"/>
         <Button
             android:id="@+id/signin"
@@ -138,8 +142,9 @@
             android:layout_height="wrap_content"
             android:text="sign in"
             android:textColor="#000"
+            android:onClick="valid"
             android:background="@drawable/button"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="30dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -157,7 +162,7 @@
         <Button
             android:id="@+id/signup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:textColor="@color/colortext"
             android:text="sign up"
             android:layout_marginLeft="10dp"

@@ -23,6 +23,6 @@ public class MainActivity extends AppCompatActivity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
-        Toast.makeText(this, "sample", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "sample", Toast.LENGTH_SHORT).show();
     }
 }

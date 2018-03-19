@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mansopresk21.mansoshopping.ExpandListView.ExplistMainActivity;
+
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -37,14 +38,6 @@ public class NavigationMainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -118,8 +111,11 @@ public class NavigationMainActivity extends AppCompatActivity
 
         if (id == R.id.women_label) {
 
-            Intent ing = new Intent(NavigationMainActivity.this, ExplistMainActivity.class);
-            startActivity(ing);
+            Fragment1 fragment1 = new Fragment1();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fr1, fragment1);
+            transaction.addToBackStack(null);
+            transaction.commit();
             // Handle the camera action
         } else if (id == R.id.men_label) {
 

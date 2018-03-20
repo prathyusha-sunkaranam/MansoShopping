@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.mansopresk21.mansoshopping.R;
@@ -49,7 +50,6 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
         ArrayList<Child> chList = groups.get(groupPosition).getItems();
         return chList.get(childPosition);
     }
-
     @Override
     public long getGroupId(int groupPosition) {
         return groupPosition;
@@ -80,6 +80,7 @@ public class ExpandListAdapter extends BaseExpandableListAdapter {
 //        ImageView iv = (ImageView) convertView.findViewById(R.id.imageview);
 //        iv.setImageResource(imageId[groupPosition]);
         return convertView;
+
     }
 
     @Override

@@ -7,6 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.Toast;
 
 public class GridActivity extends AppCompatActivity {
     private  GridAdapter adapter;
@@ -31,6 +32,7 @@ public class GridActivity extends AppCompatActivity {
 
 
                 Intent intent = new Intent(GridActivity.this, ImageviewActivity.class);
+              //  Toast.makeText(this, "hi", Toast.LENGTH_SHORT).show();
 
                 intent.putExtra("image", adapter.images[position]);
                 intent.putExtra("name", adapter.flowerNames);

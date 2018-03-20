@@ -39,6 +39,8 @@ public class NavigationMainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+        imgvw = (ImageView)findViewById(R.id.content_img);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -111,6 +113,8 @@ public class NavigationMainActivity extends AppCompatActivity
 
         if (id == R.id.Home){
 
+
+
         }
 
         else  if (id == R.id.women_label) {
@@ -120,6 +124,17 @@ public class NavigationMainActivity extends AppCompatActivity
             transaction.replace(R.id.fr1, fragment1);
             transaction.addToBackStack(null);
             transaction.commit();
+
+            imgvw.setVisibility(View.GONE);
+//            if(fragment1.isHidden()){
+//                transaction.show(fragment1);
+//
+//            }
+//            else {
+//                transaction.hide(fragment1);
+//            }
+
+
             // Handle the camera action
         } else if (id == R.id.men_label) {
             Fragment2 fragment2 = new Fragment2();
@@ -128,12 +143,16 @@ public class NavigationMainActivity extends AppCompatActivity
             transaction.addToBackStack(null);
             transaction.commit();
 
+            imgvw.setVisibility(View.GONE);
+
         } else if (id == R.id.kids_label) {
             FragmentKids fragmentKids = new FragmentKids();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fr1, fragmentKids);
             transaction.addToBackStack(null);
             transaction.commit();
+
+            imgvw.setVisibility(View.GONE);
 
         } else if (id == R.id.accessories_label) {
 

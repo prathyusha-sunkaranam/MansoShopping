@@ -1,6 +1,7 @@
 package com.example.mansopresk21.mansoshopping;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mansopresk21.mansoshopping.ExpandListView.Child;
@@ -88,6 +90,7 @@ public class Fragment1 extends Fragment {
         ExpandList.setAdapter(ExpAdapter);
 
 
+
         ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
@@ -100,7 +103,8 @@ public class Fragment1 extends Fragment {
                         groupPosition).getItems();
 
                 String child_name = ch_list.get(childPosition).getName();
-
+                Intent i = new Intent(getActivity(),GridActivity.class);
+                startActivity(i);
 
 
                 return false;
@@ -217,7 +221,12 @@ public class Fragment1 extends Fragment {
 
         return group_list;
 
+
+
+
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -236,6 +245,8 @@ public class Fragment1 extends Fragment {
 //                    + " must implement OnFragmentInteractionListener");
 //        }
 //    }
+
+
 
     @Override
     public void onDetach() {
@@ -257,4 +268,6 @@ public class Fragment1 extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

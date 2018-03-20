@@ -10,6 +10,10 @@
     tools:context="com.example.mansopresk21.mansoshopping.NavigationMainActivity"
     tools:showIn="@layout/app_bar_navigation_main">
 
-
+<ImageView
+    android:id="@+id/content_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/womensho"/>
 
 </RelativeLayout>

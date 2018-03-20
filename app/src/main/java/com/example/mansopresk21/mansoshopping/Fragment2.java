@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.mansopresk21.mansoshopping.ExpandListView.Child;
 import com.example.mansopresk21.mansoshopping.ExpandListView.ExpandListAdapter;
@@ -21,17 +20,17 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Fragment1.OnFragmentInteractionListener} interface
+ * {@link Fragment2.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Fragment1#newInstance} factory method to
+ * Use the {@link Fragment2#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment1 extends Fragment {
+public class Fragment2 extends Fragment {
 
     private ExpandListAdapter ExpAdapter;
     private ArrayList<Group> ExpListItems;
     private ExpandableListView ExpandList;
-    ImageView frmntwomen;
+    ImageView fragmentimage;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -43,7 +42,7 @@ public class Fragment1 extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Fragment1() {
+    public Fragment2() {
         // Required empty public constructor
     }
 
@@ -53,13 +52,11 @@ public class Fragment1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment1.
+     * @return A new instance of fragment Fragment2.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment1 newInstance(String param1, String param2) {
-
-
-        Fragment1 fragment = new Fragment1();
+    public static Fragment2 newInstance(String param1, String param2) {
+        Fragment2 fragment = new Fragment2();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -79,10 +76,14 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_fragment1, container, false);
-        frmntwomen = (ImageView) v.findViewById(R.id.fragmentwomen_image);
-        ExpandList = (ExpandableListView) v.findViewById(R.id.exp_list);
+
+
+
+        View v1 = inflater.inflate(R.layout.fragment_fragment2, container, false);
+        fragmentimage = (ImageView) v1.findViewById(R.id.fragmentmen_image);
+        ExpandList = (ExpandableListView) v1.findViewById(R.id.exp_list);
         ExpListItems = SetStandardGroups();
         ExpAdapter = new ExpandListAdapter(getContext(), ExpListItems);
         ExpandList.setAdapter(ExpAdapter);
@@ -124,7 +125,7 @@ public class Fragment1 extends Fragment {
                 String group_name = ExpListItems.get(groupPosition).getName();
             }
         });
-        return v;
+        return v1;
 
     }
 
@@ -134,90 +135,98 @@ public class Fragment1 extends Fragment {
         ArrayList<Child> child_list;
 
         // Setting Group 1
-        child_list = new ArrayList<Child>();
-        Group gru1 = new Group();
-        gru1.setName("Clothing");
 
-        Child ch1_1 = new Child();
-        ch1_1.setName("Dresses & Jumpsuits");
-        child_list.add(ch1_1);
-
-        Child ch1_2 = new Child();
-        ch1_2.setName("Tops, Tees & Shirts");
-        child_list.add(ch1_2);
-
-        Child ch1_3 = new Child();
-        ch1_3.setName("Ethnic Wear");
-        child_list.add(ch1_3);
-
-        Child ch1_4 = new Child();
-        ch1_4.setName("Tunics");
-        child_list.add(ch1_4);
-
-        Child ch1_5 = new Child();
-        ch1_5.setName("Trousers & Jeans");
-        child_list.add(ch1_5);
-
-        Child ch1_6 = new Child();
-        ch1_6.setName("Leggings & Jeggings");
-        child_list.add(ch1_6);
-
-        Child ch1_7 = new Child();
-        ch1_7.setName("Bridal Wear");
-        child_list.add(ch1_7);
-
-        gru1.setItems(child_list);
-
-
-
-
+        // Setting Group 2
         child_list = new ArrayList<Child>();
         Group gru2 = new Group();
-        gru2.setName("Footwear");
+        gru2.setName("Men");
 
         Child ch2_1 = new Child();
-        ch2_1.setName("Flats");
+        ch2_1.setName("Casual Shirts");
         child_list.add(ch2_1);
 
         Child ch2_2 = new Child();
-        ch2_2.setName("Sandals");
+        ch2_2.setName("Polos & Tees");
         child_list.add(ch2_2);
 
         Child ch2_3 = new Child();
-        ch2_3.setName("Heels");
+        ch2_3.setName("Formal Shirts");
         child_list.add(ch2_3);
 
         Child ch2_4 = new Child();
-        ch2_4.setName("Belly Shoes");
+        ch2_4.setName("Ethnic wear");
         child_list.add(ch2_4);
 
         Child ch2_5 = new Child();
-        ch2_5.setName("Sneakers");
+        ch2_5.setName("Winter wear");
         child_list.add(ch2_5);
 
         Child ch2_6 = new Child();
-        ch2_6.setName("Flip Flops");
+        ch2_6.setName("Denims");
         child_list.add(ch2_6);
 
         Child ch2_7 = new Child();
-        ch2_7.setName("Boots");
+        ch2_7.setName("Formal Trousers");
         child_list.add(ch2_7);
-
 
 
         gru2.setItems(child_list);
 
 
-        // Setting Group 2
+        child_list = new ArrayList<Child>();
+        Group gru3 = new Group();
+        gru3.setName("Footwear");
+
+        Child ch3_1 = new Child();
+        ch3_1.setName("Casual Shoes");
+        child_list.add(ch3_1);
+
+        Child ch3_2 = new Child();
+        ch3_2.setName("Formal Shoes");
+        child_list.add(ch3_2);
+
+        Child ch3_3 = new Child();
+        ch3_3.setName("Sports Shoes");
+        child_list.add(ch3_3);
+
+        Child ch3_4 = new Child();
+        ch3_4.setName("Sneakers");
+        child_list.add(ch3_4);
+
+        Child ch4_5 = new Child();
+        ch4_5.setName("Boots");
+        child_list.add(ch4_5);
+
+        Child ch5_5 = new Child();
+        ch5_5.setName("Slippers");
+        child_list.add(ch5_5);
+
+        Child ch6_5 = new Child();
+        ch6_5.setName("Flip Flops");
+        child_list.add(ch6_5);
+
+        Child ch7_5 = new Child();
+        ch7_5.setName("Sandals");
+        child_list.add(ch7_5);
+
+
+
+        gru3.setItems(child_list);
+
+
+
 
         //listing all groups
-        group_list.add(gru1);
+
         group_list.add(gru2);
+        group_list.add(gru3);
 
 
         return group_list;
 
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

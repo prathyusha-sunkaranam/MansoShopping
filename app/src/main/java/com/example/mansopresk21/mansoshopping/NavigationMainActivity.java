@@ -25,7 +25,7 @@ import android.widget.Toast;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class NavigationMainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
     ImageView imgvw;
 
     SharedPreferences sharedPreferences;
@@ -109,7 +109,11 @@ public class NavigationMainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.women_label) {
+        if (id == R.id.Home){
+
+        }
+
+        else  if (id == R.id.women_label) {
 
             Fragment1 fragment1 = new Fragment1();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -118,8 +122,18 @@ public class NavigationMainActivity extends AppCompatActivity
             transaction.commit();
             // Handle the camera action
         } else if (id == R.id.men_label) {
+            Fragment2 fragment2 = new Fragment2();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fr1, fragment2);
+            transaction.addToBackStack(null);
+            transaction.commit();
 
         } else if (id == R.id.kids_label) {
+            FragmentKids fragmentKids = new FragmentKids();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fr1, fragmentKids);
+            transaction.addToBackStack(null);
+            transaction.commit();
 
         } else if (id == R.id.accessories_label) {
 

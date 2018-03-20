@@ -2,19 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mansopresk21.mansoshopping.Fragment1">
+    tools:context="com.example.mansopresk21.mansoshopping.FragmentKids">
 
     <!-- TODO: Update blank fragment layout -->
-
     <ImageView
-        android:id="@+id/fragmentwomen_image"
+        android:id="@+id/fragmentkid_image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/womenshpng"/>
+        android:src="@drawable/kidsshopping"/>
     <ExpandableListView
         android:id="@+id/exp_list"
         android:layout_marginTop="150dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 </FrameLayout>

@@ -40,8 +40,8 @@ public class NavigationMainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // setSupportActionBar(toolbar);
         setSupportActionBar(toolbar);
-        //setSupportActionBar(toolbar);
 
 
         imgvw = (ImageView)findViewById(R.id.content_img);
@@ -142,10 +142,10 @@ public class NavigationMainActivity extends AppCompatActivity
             transaction.replace(R.id.fr1, fragment1);
             transaction.addToBackStack(null);
 
-            transaction=fragmentManager.beginTransaction();
-            transaction.show(fragment1);
-            transaction.hide(fragment2);
-            transaction.hide(fragmentkids);
+//            transaction=fragmentManager.beginTransaction();
+//            transaction.show(fragment1);
+//            transaction.hide(fragment2);
+//            transaction.hide(fragmentkids);
 
             transaction.commit();
 

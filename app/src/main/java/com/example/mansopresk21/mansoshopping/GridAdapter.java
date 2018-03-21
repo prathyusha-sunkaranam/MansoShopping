@@ -26,7 +26,7 @@ public class GridAdapter  extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
             R.drawable.girl8,R.drawable.girl9,
 
-            R.drawable.girl10,R.drawable.girl11,R.drawable.girl12,R.drawable.girl13,R.drawable.girl14};
+            R.drawable.girl10,R.drawable.girl5,R.drawable.girl2,R.drawable.girl3,R.drawable.girl1};
 
 
     public GridAdapter(GridActivity gridActivity) {

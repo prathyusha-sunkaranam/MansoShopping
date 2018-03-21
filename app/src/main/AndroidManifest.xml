@@ -23,6 +23,7 @@
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".GridActivity"></activity>
+        <activity android:name=".ImageviewActivity"/>
     </application>
 
 </manifest>

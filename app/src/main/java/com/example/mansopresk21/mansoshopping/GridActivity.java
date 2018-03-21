@@ -32,7 +32,6 @@ public class GridActivity extends AppCompatActivity {
 
 
                 Intent intent = new Intent(GridActivity.this, ImageviewActivity.class);
-              //  Toast.makeText(this, "hi", Toast.LENGTH_SHORT).show();
 
                 intent.putExtra("image", adapter.images[position]);
                 intent.putExtra("name", adapter.flowerNames);

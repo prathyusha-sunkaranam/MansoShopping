@@ -1,4 +1,4 @@
-package com.example.mansopresk21.mansoshopping.ExpandListView;
+package com.example.mansopresk21.mansoshopping.ExpModel;
 
 /**
  * Created by Mansopresk01 on 3/13/2018.
@@ -9,9 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.example.mansopresk21.mansoshopping.R;

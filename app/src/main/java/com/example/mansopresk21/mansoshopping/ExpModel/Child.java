@@ -1,4 +1,4 @@
-package com.example.mansopresk21.mansoshopping.ExpandListView;
+package com.example.mansopresk21.mansoshopping.ExpModel;
 
 /**
  * Created by Mansopresk01 on 3/12/2018.

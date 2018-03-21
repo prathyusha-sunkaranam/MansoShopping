@@ -1,4 +1,4 @@
-package com.example.mansopresk21.mansoshopping.ExpandListView;
+package com.example.mansopresk21.mansoshopping.ExpModel;
 
 import java.util.ArrayList;
 

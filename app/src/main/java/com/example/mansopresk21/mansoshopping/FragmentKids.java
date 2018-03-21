@@ -1,6 +1,5 @@
 package com.example.mansopresk21.mansoshopping;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 
-import com.example.mansopresk21.mansoshopping.ExpandListView.Child;
-import com.example.mansopresk21.mansoshopping.ExpandListView.ExpandListAdapter;
-import com.example.mansopresk21.mansoshopping.ExpandListView.Group;
+import com.example.mansopresk21.mansoshopping.ExpModel.Child;
+import com.example.mansopresk21.mansoshopping.ExpModel.ExpandListAdapter;
+import com.example.mansopresk21.mansoshopping.ExpModel.Group;
 
 import java.util.ArrayList;
 

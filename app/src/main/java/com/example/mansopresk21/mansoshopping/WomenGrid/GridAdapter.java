@@ -1,13 +1,13 @@
-package com.example.mansopresk21.mansoshopping;
+package com.example.mansopresk21.mansoshopping.WomenGrid;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.mansopresk21.mansoshopping.R;
 
 /**
  * Created by Mansopresk01 on 3/20/2018.
@@ -16,7 +16,8 @@ import android.widget.TextView;
 public class GridAdapter  extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
 
-    String flowerNames[] ={"pink","yellowrose","rose","pink","pink","yellowrose","rose","pink"} ;
+    String flowerNames[] ={"pink","yellowrose","rose","pink","pink","yellowrose",
+            "rose","pink","pink","yellowrose","rose","pink","pink"} ;
 
     Integer images[] = {R.drawable.girl1,
 
@@ -26,7 +27,9 @@ public class GridAdapter  extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
             R.drawable.girl8,R.drawable.girl9,
 
-            R.drawable.girl10,R.drawable.girl5,R.drawable.girl2,R.drawable.girl3,R.drawable.girl1};
+            R.drawable.girl10,R.drawable.girl11,
+            R.drawable.girl12,R.drawable.girl13,
+            R.drawable.girl14};
 
 
     public GridAdapter(GridActivity gridActivity) {
@@ -52,7 +55,7 @@ public class GridAdapter  extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return flowerNames.length;
+        return images.length;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

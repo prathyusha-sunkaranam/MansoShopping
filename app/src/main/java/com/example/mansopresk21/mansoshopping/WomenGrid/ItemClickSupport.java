@@ -1,7 +1,9 @@
-package com.example.mansopresk21.mansoshopping;
+package com.example.mansopresk21.mansoshopping.WomenGrid;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.example.mansopresk21.mansoshopping.R;
 
 /**
  * Created by john on 12/18/2017.

@@ -1,4 +1,4 @@
-package com.example.mansopresk21.mansoshopping;
+package com.example.mansopresk21.mansoshopping.WomenGrid;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.GridView;
-import android.widget.Toast;
+
+import com.example.mansopresk21.mansoshopping.R;
 
 public class GridActivity extends AppCompatActivity {
     private  GridAdapter adapter;

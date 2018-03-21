@@ -6,8 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -30,8 +28,6 @@ public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
     ImageView imgvw;
 
-    Fragment fragment1,fragment2,fragmentkids;
-
     SharedPreferences sharedPreferences;
     TextView nav_text;
 
@@ -40,7 +36,6 @@ public class NavigationMainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
         setSupportActionBar(toolbar);
 
 
@@ -92,17 +87,6 @@ public class NavigationMainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation_main, menu);
-//        fragment = new Home();
-//        hf = (Home) fragment;
-//        fragmentManager = getSupportFragmentManager();
-//        fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
-//        Ftransaction=fragmentManager.beginTransaction();
-//        Ftransaction.show(hf);
-//        Ftransaction.commit();
-
-
-
-
         return true;
     }
 
@@ -131,56 +115,41 @@ public class NavigationMainActivity extends AppCompatActivity
 
 
 
-
         }
 
         else  if (id == R.id.women_label) {
 
             Fragment1 fragment1 = new Fragment1();
-          FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fr1, fragment1);
             transaction.addToBackStack(null);
-
-//            transaction=fragmentManager.beginTransaction();
-//            transaction.show(fragment1);
-//            transaction.hide(fragment2);
-//            transaction.hide(fragmentkids);
-
             transaction.commit();
 
-
-
+            imgvw.setVisibility(View.GONE);
+//            if(fragment1.isHidden()){
+//                transaction.show(fragment1);
+//
+//            }
+//            else {
+//                transaction.hide(fragment1);
+//            }
 
 
             // Handle the camera action
         } else if (id == R.id.men_label) {
             Fragment2 fragment2 = new Fragment2();
-            FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fr1, fragment2);
             transaction.addToBackStack(null);
-
-            transaction=fragmentManager.beginTransaction();
-            transaction.show(fragment2);
-            transaction.hide(fragment1);
-            transaction.hide(fragmentkids);
             transaction.commit();
 
             imgvw.setVisibility(View.GONE);
 
         } else if (id == R.id.kids_label) {
             FragmentKids fragmentKids = new FragmentKids();
-            FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fr1, fragmentKids);
             transaction.addToBackStack(null);
-            transaction=fragmentManager.beginTransaction();
-
-            transaction.show(fragmentkids);
-            transaction.hide(fragment1);
-            transaction.hide(fragment2);
-
             transaction.commit();
 
             imgvw.setVisibility(View.GONE);

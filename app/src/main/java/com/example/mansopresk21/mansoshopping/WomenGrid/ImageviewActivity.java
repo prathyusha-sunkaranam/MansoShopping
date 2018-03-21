@@ -1,10 +1,12 @@
-package com.example.mansopresk21.mansoshopping;
+package com.example.mansopresk21.mansoshopping.WomenGrid;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.mansopresk21.mansoshopping.R;
 
 public class ImageviewActivity extends AppCompatActivity
 {

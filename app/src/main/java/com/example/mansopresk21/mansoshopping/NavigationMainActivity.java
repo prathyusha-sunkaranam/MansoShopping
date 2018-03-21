@@ -41,6 +41,7 @@ public class NavigationMainActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
 
         imgvw = (ImageView)findViewById(R.id.content_img);

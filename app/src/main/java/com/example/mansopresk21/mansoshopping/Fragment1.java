@@ -26,12 +26,13 @@ import java.util.ArrayList;
  * Use the {@link Fragment1#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment1 extends Fragment {
+public class Fragment1 extends Fragment  {
 
     private ExpandListAdapter ExpAdapter;
     private ArrayList<Group> ExpListItems;
     private ExpandableListView ExpandList;
     ImageView frmntwomen;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -76,7 +77,9 @@ public class Fragment1 extends Fragment {
         }
     }
 
-    @Override
+
+
+        @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -88,6 +91,14 @@ public class Fragment1 extends Fragment {
         ExpandList.setAdapter(ExpAdapter);
 
 
+
+        if(onBackPressed())
+        {
+            Intent i = new Intent(getActivity(),HomeFragment.class);
+            startActivity(i);
+
+
+        }
 
         ExpandList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
@@ -224,6 +235,17 @@ public class Fragment1 extends Fragment {
 
     }
 
+//    @Override
+//    public void onBackPressed() {
+//
+//        if (onBackPressedListener != null) {
+//            onBackPressedListener.doBack();
+//
+//
+//        }
+//        else
+//            super.onBackPressed();
+
 
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -265,6 +287,15 @@ public class Fragment1 extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+
+    public boolean onBackPressed()
+    {
+        //if you return false, then it is because you have not consumed
+        //the event, but if it          returns true, which is consumed by this event.
+
+        return false;
     }
 
 

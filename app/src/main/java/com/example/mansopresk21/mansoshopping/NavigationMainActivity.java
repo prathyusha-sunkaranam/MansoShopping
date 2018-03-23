@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -26,10 +28,16 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class NavigationMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
-    ImageView imgvw;
 
     SharedPreferences sharedPreferences;
     TextView nav_text;
+    Fragment fragment;
+    Fragment1 f1;
+    Fragment2 f2;
+    FragmentKids fk;
+    HomeFragment hm;
+    FragmentManager fragmentManager;
+    FragmentTransaction transaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +47,7 @@ public class NavigationMainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-        imgvw = (ImageView)findViewById(R.id.content_img);
+        //imgvw = (ImageView)findViewById(R.id.content_img);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,6 +60,15 @@ public class NavigationMainActivity extends AppCompatActivity
         View header = navigationView.getHeaderView(0);
         nav_text = (TextView)header.findViewById(R.id.nav_text);
         CircleImageView drawerHeaderImage = (CircleImageView) header.findViewById(R.id.circularImageId);
+
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(NavigationMainActivity.this,MainActivity.class);
+                startActivity(i);
+                // Your code here
+            }
+        });
 
         sharedPreferences = getSharedPreferences("userdetails", MODE_PRIVATE);
         String uname = sharedPreferences.getString("email", null);
@@ -66,11 +83,20 @@ public class NavigationMainActivity extends AppCompatActivity
             }
         }
 
+
+
+
+        fragment = new HomeFragment();
+        hm = (HomeFragment) fragment;
+        fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fr1, fragment).commit();
+        transaction=fragmentManager.beginTransaction();
+        transaction.show(hm);
+        transaction.commit();
+
+
     }
-    public void login (View v){
-        Intent i = new Intent(NavigationMainActivity.this,MainActivity.class);
-        startActivity(i);
-    }
+
 
 
     @Override
@@ -81,6 +107,7 @@ public class NavigationMainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+
     }
 
     @Override
@@ -125,25 +152,16 @@ public class NavigationMainActivity extends AppCompatActivity
             transaction.addToBackStack(null);
             transaction.commit();
 
-            imgvw.setVisibility(View.GONE);
-//            if(fragment1.isHidden()){
-//                transaction.show(fragment1);
-//
-//            }
-//            else {
-//                transaction.hide(fragment1);
-//            }
-
 
             // Handle the camera action
         } else if (id == R.id.men_label) {
-            Fragment2 fragment2 = new Fragment2();
+            Fragment fragment2 = new Fragment2();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fr1, fragment2);
             transaction.addToBackStack(null);
             transaction.commit();
 
-            imgvw.setVisibility(View.GONE);
+            //imgvw.setVisibility(View.GONE);
 
         } else if (id == R.id.kids_label) {
             FragmentKids fragmentKids = new FragmentKids();
@@ -152,7 +170,7 @@ public class NavigationMainActivity extends AppCompatActivity
             transaction.addToBackStack(null);
             transaction.commit();
 
-            imgvw.setVisibility(View.GONE);
+            //imgvw.setVisibility(View.GONE);
 
         } else if (id == R.id.accessories_label) {
 

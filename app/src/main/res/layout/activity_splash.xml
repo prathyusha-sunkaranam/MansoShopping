@@ -7,12 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.mansopresk21.mansoshopping.SplashActivity">
 
-    <pl.droidsonroids.gif.GifImageView
+    <ImageView
+        android:id="@+id/gifimage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gifimage"
-        android:background="#ffffff"
-        android:alpha="0.7"
-        android:src="@drawable/splash"/>
+        android:src="@drawable/splashnew" />
 
 </RelativeLayout>

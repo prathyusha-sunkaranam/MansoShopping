@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mansopresk21.mansoshopping.MainActivity">
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/shop"
+        android:background="#ffffff"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="First Name"
+                android:backgroundTint="@color/colortext"
+                android:textColorHint="@color/colortext"
+                android:textColor="#fff"
+                android:id="@+id/edtfirstname"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Last Name"
+                android:backgroundTint="@color/colortext"
+                android:textColorHint="@color/colortext"
+                android:textColor="#fff"
+                android:id="@+id/edtlastname"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email Id"
+                android:backgroundTint="@color/colortext"
+                android:textColorHint="@color/colortext"
+                android:textColor="#fff"
+                android:id="@+id/edtemail"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Mobile No"
+                android:backgroundTint="@color/colortext"
+                android:textColorHint="@color/colortext"
+                android:textColor="#fff"
+                android:id="@+id/edtmobile"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password"
+                android:backgroundTint="@color/colortext"
+                android:textColorHint="@color/colortext"
+                android:textColor="#fff"
+                android:id="@+id/edtPass"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Re-Enter Password"
+                android:backgroundTint="@color/colortext"
+                android:textColorHint="@color/colortext"
+                android:textColor="#fff"
+                android:id="@+id/edtconfrmpass"
+                />
+            <Button
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:layout_marginTop="20dp"
+                android:onClick="r1"
+                android:textColor="#000"
+                android:background="@drawable/button"
+                android:textAllCaps="false"
+
+
+                tools:ignore="OnClick" />
+        </LinearLayout>
+</RelativeLayout>

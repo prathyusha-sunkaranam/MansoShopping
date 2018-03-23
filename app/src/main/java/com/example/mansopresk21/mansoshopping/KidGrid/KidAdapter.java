@@ -1,4 +1,4 @@
-package com.example.mansopresk21.mansoshopping.WomenGrid;
+package com.example.mansopresk21.mansoshopping.KidGrid;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,47 +7,49 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+import com.example.mansopresk21.mansoshopping.MenGrid.MenGridActivity;
 import com.example.mansopresk21.mansoshopping.R;
 
 /**
- * Created by Mansopresk01 on 3/20/2018.
+ * Created by Mansopresk01 on 3/21/2018.
  */
 
-public class GridAdapter  extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
+public class KidAdapter extends RecyclerView.Adapter<KidAdapter.ViewHolder> {
 
 
     String flowerNames[] ={"pink","yellowrose","rose","pink","pink","yellowrose",
-            "rose","pink","pink","yellowrose","rose","pink","pink"} ;
+            "rose","pink","pink","yellowrose","rose","pink","pink","pink","pink",
+            "pink","pink","pink"} ;
 
-    Integer images[] = {R.drawable.girl1,
+    Integer images[] = {R.drawable.kid1,
 
-            R.drawable.girl2,R.drawable.girl3,
+            R.drawable.kid2,R.drawable.kid3,
 
-            R.drawable.girl5,R.drawable.girl7,
+            R.drawable.kid4,R.drawable.kid5,
 
-            R.drawable.girl8,R.drawable.girl9,
+            R.drawable.kid6,R.drawable.kid7,
 
-            R.drawable.girl10,R.drawable.girl11,
-            R.drawable.girl12,R.drawable.girl13,
-            R.drawable.girl14};
+            R.drawable.kid8,R.drawable.kid9,
+            R.drawable.kid10,R.drawable.kid11,
+            R.drawable.kid12,R.drawable.kid13,R.drawable.kid14,R.drawable.kid15,R.drawable.kid16,
+            R.drawable.kid17,R.drawable.kid18};
 
 
-    public GridAdapter(GridActivity gridActivity) {
+    public KidAdapter(KidActivity kidActivity) {
     }
 
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public KidAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_item, parent, false);
         // set the view's size, margins, paddings and layout parameters
-        ViewHolder vh = new ViewHolder(v); // pass the view to View Holder
+        KidAdapter.ViewHolder vh = new KidAdapter.ViewHolder(v); // pass the view to View Holder
         return vh;
-
-
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(KidAdapter.ViewHolder holder, final int position) {
 
         holder.name.setText(flowerNames[position]);
         holder.image.setBackgroundResource(images[position]);
@@ -72,5 +74,5 @@ public class GridAdapter  extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
         }
     }
-    }
 
+}

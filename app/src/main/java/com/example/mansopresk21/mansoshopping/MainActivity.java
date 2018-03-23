@@ -65,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }}
 
+    public void signup(View v){
+        Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
+        startActivity(i3);
+    }
+
     public void close(View v){
         Intent i2 = new Intent(MainActivity.this,NavigationMainActivity.class);
         startActivity(i2);

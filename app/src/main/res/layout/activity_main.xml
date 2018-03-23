@@ -165,6 +165,7 @@
             android:layout_height="40dp"
             android:textColor="@color/colortext"
             android:text="sign up"
+            android:onClick="signup"
             android:layout_marginLeft="10dp"
             android:background="@drawable/border"/>
 

@@ -22,9 +22,12 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".WomenGrid.GridActivity"></activity>
-        <activity android:name=".WomenGrid.ImageviewActivity"/>
-        <activity android:name=".MenGrid.MenGridActivity"/>
+        <activity android:name=".WomenGrid.GridActivity" />
+        <activity android:name=".WomenGrid.ImageviewActivity" />
+        <activity android:name=".MenGrid.MenGridActivity" />
+        <activity android:name=".KidGrid.KidActivity" />
+        <activity android:name=".RegistrationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

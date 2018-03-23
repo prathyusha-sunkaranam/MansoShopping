@@ -1,5 +1,6 @@
 package com.example.mansopresk21.mansoshopping;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.widget.ImageView;
 import com.example.mansopresk21.mansoshopping.ExpModel.Child;
 import com.example.mansopresk21.mansoshopping.ExpModel.ExpandListAdapter;
 import com.example.mansopresk21.mansoshopping.ExpModel.Group;
+import com.example.mansopresk21.mansoshopping.KidGrid.KidActivity;
+import com.example.mansopresk21.mansoshopping.WomenGrid.GridActivity;
 
 import java.util.ArrayList;
 
@@ -96,6 +99,10 @@ public class FragmentKids extends Fragment {
                         groupPosition).getItems();
 
                 String child_name = ch_list.get(childPosition).getName();
+
+                Intent i = new Intent(getActivity(),KidActivity.class);
+                startActivity(i);
+
 
 
 

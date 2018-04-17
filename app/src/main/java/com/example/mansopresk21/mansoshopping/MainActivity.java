@@ -9,16 +9,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     Button facebook,google,signup,signin;
     EditText email,password;
 
-    public static final String MyPREFERENCES = "MyPrefs" ;
-    public static final String Name = "nameKey";
-    public static final String pswrd = "pswrdKey";
+
+   // private FirebaseAuth fireAuth;
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
+
+
 
 
 
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         signin = (Button)findViewById(R.id.signin);
         email = (EditText)findViewById(R.id.emailid);
         password = (EditText)findViewById(R.id.password);
+
+       // fireAuth=FirebaseAuth.getInstance();
 
         sharedpreferences = getSharedPreferences("userdetails",MODE_PRIVATE);
         String uname = sharedpreferences.getString("email",null);
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     }}
 
     public void signup(View v){
-        Intent i3 = new Intent(MainActivity.this,RegistrationActivity.class);
+        Intent i3 = new Intent(MainActivity.this,Registration.class);
         startActivity(i3);
     }
 
@@ -74,4 +79,14 @@ public class MainActivity extends AppCompatActivity {
         Intent i2 = new Intent(MainActivity.this,NavigationMainActivity.class);
         startActivity(i2);
     }
+
+    public void fb(View v){
+        Intent i3 = new Intent(MainActivity.this,FacebookActivity.class);
+        startActivity(i3);
+    }
+    public void google (View v){
+        Intent i4 = new Intent(MainActivity.this,GoogleActivity.class);
+        startActivity(i4);
+    }
+
 }

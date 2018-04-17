@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "902180082379",
+    "firebase_url": "https://mansoshopping.firebaseio.com",
+    "project_id": "mansoshopping",
+    "storage_bucket": "mansoshopping.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902180082379:android:4fdfcde2d2149ddb",
+        "android_client_info": {
+          "package_name": "com.example.mansopresk21.mansoshopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902180082379-9ejphdo86mtnjh4afgi9tjvfvio3maqs.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "902180082379-tdo6fkg85lu92tj383f9u358is4fj5ub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mansopresk21.mansoshopping",
+            "certificate_hash": "b0800ac699fb5117cbf4bd5120fd1d82771b6d73"
+          }
+        },
+        {
+          "client_id": "902180082379-7t1sso7s8bu2i33ma4mi3dmq713iatgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsV3vv0yHvBR532qt-F6YIzRh0sRsyw7w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902180082379-9ejphdo86mtnjh4afgi9tjvfvio3maqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

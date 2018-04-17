@@ -26,8 +26,44 @@
         <activity android:name=".WomenGrid.ImageviewActivity" />
         <activity android:name=".MenGrid.MenGridActivity" />
         <activity android:name=".KidGrid.KidActivity" />
-        <activity android:name=".RegistrationActivity"
+        <activity android:name=".TemplateActivity" />
+        <activity android:name=".Template2Activity" />
+        <activity android:name=".Notification.NotificationActivity" />
+        <activity android:name=".Registration"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Notification.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Notification.MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".UserProfile" />
+        <activity android:name=".GoogleActivity"></activity>
     </application>
 
 </manifest>

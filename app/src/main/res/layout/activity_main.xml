@@ -58,6 +58,7 @@
             android:background="@drawable/border"
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
+             android:onClick="fb"
             android:text="FACEBOOK"
             android:textColor="@color/colortext"
             android:drawableLeft="@drawable/facebook"/>
@@ -70,6 +71,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="10dp"
             android:text="Google"
+            android:onClick="google"
             android:textColor="@color/colortext"
             android:layout_height="wrap_content" />
     </LinearLayout>

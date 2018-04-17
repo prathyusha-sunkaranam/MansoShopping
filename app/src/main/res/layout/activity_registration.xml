@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,6 +11,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.mansopresk21.mansoshopping.MainActivity">
+
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,11 +20,105 @@
         android:alpha="0.7"
         android:scaleType="centerCrop"
         android:src="@drawable/shop"/>
-        <LinearLayout
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_arrow_back_black_24dp2"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colortext"
+        android:onClick="close"/>
+
+    <TextView
+        android:id="@+id/discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover Fashion !"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:textColor="#fff"/>
+    <TextView
+        android:id="@+id/fashionsignup_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text="You're just one step away from signing up."
+        android:layout_below="@+id/discover"
+        android:textColor="#fff"/>
+
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/fashionsignup_label">
+        <Button
+            android:id="@+id/fb_btnregis"
+            android:layout_width="160dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:onClick="fb"
+            android:text="FACEBOOK"
+            android:textColor="@color/colortext"
+            android:drawableLeft="@drawable/facebook"/>
+        <Button
+            android:id="@+id/google_btnregister"
+            android:layout_width="150dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/search"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="Google"
+            android:onClick="google"
+            android:textColor="@color/colortext"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/btnlayout"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colortext"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or"
+            android:paddingLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/colortext"/>
+        <View
+            android:id="@+id/viewline"
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colortext"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@id/btnlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_margin="20dp"
+            android:layout_marginTop="150dp"
             android:gravity="center">
             <EditText
                 android:layout_width="match_parent"
@@ -29,6 +128,7 @@
                 android:backgroundTint="@color/colortext"
                 android:textColorHint="@color/colortext"
                 android:textColor="#fff"
+                android:layout_marginTop="30dp"
                 android:id="@+id/edtfirstname"
                 />
             <EditText
@@ -87,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:layout_marginTop="20dp"
-                android:onClick="r1"
+                android:onClick="register"
                 android:textColor="#000"
                 android:background="@drawable/button"
                 android:textAllCaps="false"
@@ -95,4 +195,6 @@
 
                 tools:ignore="OnClick" />
         </LinearLayout>
+
 </RelativeLayout>
+</ScrollView>

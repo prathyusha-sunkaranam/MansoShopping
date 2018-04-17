@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mansopresk21.mansoshopping.TemplateActivity">
+
+    <TextView
+        android:id="@+id/logintemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:layout_marginTop="80dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Mobile Number"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:drawableLeft="@drawable/tempuser"
+            android:drawablePadding="20dp"
+            android:background="@drawable/loginshape"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Password"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/key"
+            android:paddingLeft="10dp"
+            android:drawablePadding="20dp"
+            android:background="@drawable/loginshape"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FORGOT PASSWORD"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/loginborder"
+            android:layout_marginTop="20dp"
+            android:text="Login"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/btnlayout"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#56bcbc"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="#56bcbc"/>
+            <View
+                android:id="@+id/viewline"
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#56bcbc"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOT A MEMBER , REGISTER NOW"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
